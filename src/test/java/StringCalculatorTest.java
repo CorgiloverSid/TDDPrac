@@ -1,7 +1,5 @@
 import org.example.StringCalculator;
 import org.junit.Test;
-
-//import static org.example.Main.whenMetacharactersNotEscaped_thenNoMatchesFound;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
@@ -110,5 +108,10 @@ public class StringCalculatorTest {
     public void testMultipleErrorsWithTwoNegatives() {
         String expected = "Number expected but ',' found at position 3\nNegative not allowed : -1\nNegative not allowed : -2";
         assertEquals(expected, StringCalculator.add("-1,,-2"));
+    }
+
+    @Test
+    public void testMultiplyTwoNumbers() {
+        assertEquals("4", StringCalculator.multiply("2,2"));
     }
 }

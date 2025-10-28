@@ -10,6 +10,11 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void emptyStringMultiReturnsOne() {
+        assertEquals("1", StringCalculator.multiply(""));
+    }
+
+    @Test
     public void singleNumberReturnsSame() {
         assertEquals("5", StringCalculator.add("5"));
     }
@@ -109,7 +114,6 @@ public class StringCalculatorTest {
         String expected = "Number expected but ',' found at position 3\nNegative not allowed : -1\nNegative not allowed : -2";
         assertEquals(expected, StringCalculator.add("-1,,-2"));
     }
-
     @Test
     public void testMultiplyTwoNumbers() {
         assertEquals("4", StringCalculator.multiply("2,2"));
